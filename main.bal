@@ -1,5 +1,5 @@
 import ballerina/io;
-import ballerina/xmldata;
+import ballerina/data.xmldata;
 
 xml input = xml `<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
    <s:Header>
@@ -18,6 +18,6 @@ xml input = xml `<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" x
 </s:Envelope>`;
 
 public function main() returns error? {
-    S_Envelope envelope = check xmldata:fromXml(input);
+    S_Envelope envelope = check xmldata:parseAsType(input);
     io:println(envelope);
 }
