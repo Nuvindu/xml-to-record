@@ -9,8 +9,6 @@ type A_Action record {
 @xmldata:Namespace {prefix: "h", uri: "http://htng.org/1.3/Header/"}
 type H_TimeStamp record {
     string \#content;
-    @xmldata:Attribute
-    string 'xmlns;
 };
 
 type S_Header record {
